@@ -5,20 +5,20 @@
     android:background="@color/light_blue"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
+    <Button
+        android:id="@+id/btnGenerate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:clickable="true"
         android:gravity="center"
         android:onClick="generateNow"
         android:text="Generate QRCode &amp; BarCode"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/contents_text"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
     <ImageView
@@ -29,20 +29,30 @@
         android:layout_centerVertical="true"
         android:src="@drawable/maksumon" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:onClick="emailNow"
+        android:text="Email"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnScan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
+        android:layout_margin="5dp"
         android:clickable="true"
         android:gravity="center"
         android:onClick="scanNow"
         android:text="Scan QRCode &amp; BarCode"
-        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/contents_text"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

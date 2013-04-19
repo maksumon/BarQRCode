@@ -5,8 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ToggleButton;
 
 public class GeneratorActivity extends Activity {
 
@@ -20,13 +20,11 @@ public class GeneratorActivity extends Activity {
 	
 	public void onBackToMain(View view){
 		EditText txtContent = (EditText)findViewById(R.id.txtContent);
-		CheckBox chkBarCode = (CheckBox) findViewById(R.id.chkBarCode);
-		CheckBox chkQRCode = (CheckBox) findViewById(R.id.chkQRCode);
+		ToggleButton toggleCode = (ToggleButton) findViewById(R.id.toggleCode);
 		
 		Intent i = getIntent();
 		i.putExtra("txtContent", txtContent.getText().toString());
-		i.putExtra("barCode", chkBarCode.isChecked());
-		i.putExtra("qrCode", chkQRCode.isChecked());
+		i.putExtra("toggleCode", toggleCode.isChecked());
 		
 		setResult(RESULT_OK, i);
 		
