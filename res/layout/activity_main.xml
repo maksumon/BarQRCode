@@ -38,7 +38,7 @@
         android:layout_margin="5dp"
         android:onClick="emailNow"
         android:text="Email"
-        android:visibility="visible" />
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnScan"
